@@ -15,4 +15,4 @@ cd ../subDir_2
 
 who | wc -l >file-n &&  ls | wc -l >> file-n 
 ls [aA]*
-ls |wc -l and echo 'compilation succeeds'
+ls |wc -l && echo 'compilation succeeds'
