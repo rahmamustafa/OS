@@ -82,3 +82,32 @@ count=0
 		done
 avg=`expr $answer/$count|bc`
 echo "the average is $avg"
+echo " Question 7 "
+answer=0
+count=0
+echo "Enter your number"
+read number
+number2=$number			
+	for (( ;; ))
+	do
+	if [ $(($number2)) -ge 10 ]
+		then
+	rem=`expr $number2 % 10`
+	echo "$rem"
+	answer=`expr $answer + $rem`
+	count=`expr $count + 1 `
+	number2=`expr $number2 / 10`
+	elif [ $(($number2)) -ge 1  ]
+	then
+	echo "$number2"
+	answer=`expr $answer + $number2`
+	count=`expr $count + 1`
+	number2=`expr $number2 / 10`
+	
+		else
+			break
+		fi
+		done
+echo "the sum is $answer"				
+avg=`expr $answer/$count|bc`
+echo "the average is $avg"		
