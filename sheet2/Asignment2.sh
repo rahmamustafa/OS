@@ -35,3 +35,26 @@ do
 	result=`expr $result \* $number`
 done
 echo "$result"
+echo " Question 5 "
+echo "Enter your number"
+read number
+if [ $number -le 1 ]
+then
+	echo "The number is not prime"
+else
+flag=1
+	for (( i=2;i<$number;i++ ))
+	do
+		
+		if [ $(($number % $i)) -eq 0 ]
+		then
+			flag=0
+		fi
+	done
+if [ $flag -eq 1 ]
+then 
+	echo " number is prime "
+else
+	echo "number is not prime "	
+fi
+fi
