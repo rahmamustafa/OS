@@ -24,3 +24,14 @@ else
 	salary_after_tax=$gross_salary
 fi
 echo "Your net salary after tax reduction is $salary_after_tax "
+echo " Question 4 "
+echo "Enter number"
+read number
+echo "Enter power"
+read power
+result=1
+for (( i=1;i<=power;i++ ))
+do
+	result=`expr $result \* $number`
+done
+echo "$result"
