@@ -58,3 +58,27 @@ else
 	echo "number is not prime "	
 fi
 fi
+echo " Question 6 "
+answer=0
+count=0		
+	for (( ;; ))
+	do
+		echo "Enter your number"
+		read number	
+		if [ $number -lt 0 ]
+		then
+			echo " ERROR"
+		
+		elif [ $number -eq 0 ]
+		then
+			break
+
+		else
+		 
+			answer=`expr $answer + $number`
+			count=`expr $count + 1 `
+
+		fi
+		done
+avg=`expr $answer/$count|bc`
+echo "the average is $avg"
